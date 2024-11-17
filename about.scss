@@ -1,0 +1,239 @@
+
+html {
+    scroll-behavior: smooth;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+main {
+    background-color: #ACD5DE;
+    
+    .mainAbout {
+        padding-top: 150px;
+        margin-left: 50px;
+        animation: fadeIn 1s linear  1;
+
+        .aboutTexts {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            color: #1A4E8D;
+            font-family: Montserrat;
+            margin-top: 30px;
+            margin-bottom: 100px;
+            animation: fadeIn 1s linear  1;
+
+            p {
+                font-size: 24px;
+                font-weight: 500;
+            }
+
+            h1 {
+                font-size: 64px
+            }
+            .mobileH1 {
+                display: none;
+            }
+        }
+        .storyAndPic {
+            display: flex;
+            animation: fadeIn 1s linear  1;
+            margin-bottom: 40px;
+            gap: 400px;
+            flex-wrap: wrap;
+            .storySection {
+                font-family: Montserrat;
+                color: #1A4E8D;
+                .storyStart {
+                    font-size: 25px;
+                    font-weight: 500;
+                    margin-bottom: 30px;
+                }
+                .story {
+                
+                 p {
+                        margin-bottom: 50px;
+                        font-size: 18px;
+                        width: 550px;
+                    }
+                }
+            }
+            img {
+                margin-right: 50px;
+                height: 690px;
+            }
+        }
+    }
+}
+
+section {
+    background-color: #1A4E8D;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 220px;
+    
+    .sectionText {
+        justify-content: center;
+        display: flex;
+        font-size: 45px;
+        font-family: Montserrat;
+        color: #FFFFFF;
+        padding-bottom: 130px;
+        padding-top: 50px;
+        animation: fadeIn 1s linear  1;
+    }
+    .sectionMembers {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px;
+        animation: fadeIn 1s linear  1;
+        .membersCard {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 245px;
+            gap: 15px;
+            
+
+            img {
+                border-radius: 10px;
+            }
+            p {
+                color: #FFFFFF;
+                font-family: Montserrat;
+            }
+            .firstP {
+                margin-bottom: 10px;
+                margin-top: 10px;
+                font-size: 23px;
+                font-weight: 500;
+            }
+            .memberButton {
+                padding: 9px 30px 9px 30px;
+                border-radius: 25px;
+                background-color: white;
+                width: 230px;
+                display: flex;
+                justify-content: center;
+                cursor: pointer;
+                transition: 1s;
+                    &:hover {
+                        background-color: #ACD5DE;
+                        transition: 1s;
+                    }
+            
+                a {
+                    text-decoration: none;
+                    color: #1A4E8D;
+                    font-family: Montserrat;
+                    font-weight: 500;
+ 
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 576px) {
+
+    nav {
+        background-color: #ACD5DE !important;
+    }
+
+    main {
+        .mainAbout {
+            padding-top: 0px;
+            margin-left: 0px;
+            .aboutTexts {
+                margin-left: 40px;
+                margin-bottom: 10px;
+                h1 {
+                    display: none;
+                }
+                .mobileH1 {
+                    display: block;
+                    font-size: 51px;
+                }
+            }
+
+            .storyAndPic {
+                flex-direction: column-reverse;
+                gap: 0px !important;
+                flex-wrap: nowrap;
+                .storySection {
+                    margin-left: 40px;
+                    .storyStart {
+                        margin-top: 30px;
+                    }
+                    .story {
+                        p {
+                            font-size: 20px !important;
+                            width: 100% !important;
+                        }
+                    }
+                }
+                img {
+                    margin-right: 0px;
+                    height: auto;
+                    
+                }
+            }
+        }
+    }
+
+    section {
+        .aboutSection {
+            .sectionText {
+                h1 {
+                    font-size: 40px;
+                }
+            }
+            .sectionMembers {
+                flex-direction: column;
+                align-items: center;
+                flex-wrap: nowrap;
+                .membersCard {
+                    width: 80%;
+                    
+                    img {
+                        width: 85%;
+                    }
+                    .firstP {
+                        margin-top: 0px;
+                        margin-bottom: 0px;
+                        font-size: 41px;
+                    }
+                    p {
+                        font-size: 17px;
+                    }
+                    .memberButton {
+                        margin-top: 45px;
+                        width: 85%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1820px)  {
+    main {
+        .mainAbout {
+            .storyAndPic {
+                gap: 325px;
+                justify-content: center;
+            }
+        }
+    }
+
+}

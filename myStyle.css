@@ -1,0 +1,528 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav .rightSide ul .activePage {
+  background-color: #1A4E8D;
+}
+nav .rightSide ul .activePage a {
+  color: white !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+nav {
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  background-color: #ACD5DE;
+}
+nav .leftSide {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  gap: 10px;
+  margin-left: 40px;
+}
+nav .leftSide .firstSvg {
+  width: 30px;
+  color: black;
+}
+nav .leftSide .svgText {
+  font-family: Montserrat;
+  color: #1A4E8D;
+  font-size: 23px;
+  margin-top: 19px;
+  font-weight: 500;
+}
+nav .rightSide {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  margin-right: 3%;
+}
+nav .rightSide ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 25px;
+}
+nav .rightSide ul li {
+  font-family: Montserrat;
+  transition: 1s;
+}
+nav .rightSide ul .diffLi {
+  color: #1A4E8D;
+  display: flex;
+  gap: 6px;
+}
+nav .rightSide ul .diffLi .firstIcon {
+  margin-right: 10px;
+  margin-top: 2px;
+}
+nav .rightSide ul .diffLi a {
+  text-decoration: none;
+  color: #1A4E8D;
+  font-family: Montserrat;
+  transition: 1s;
+}
+nav .rightSide ul .diffLi:hover a {
+  color: rgba(26, 78, 141, 0.631372549);
+}
+nav .rightSide ul .lis {
+  padding: 10px 30px 10px 30px;
+  border-radius: 25px;
+}
+nav .rightSide ul .lis:hover {
+  background-color: #1A4E8D;
+  transition: 0.5s;
+}
+nav .rightSide ul .lis:hover a {
+  color: aliceblue;
+  transition: 0.5s;
+}
+nav .rightSide ul .lis a {
+  text-decoration: none;
+  color: #1A4E8D;
+}
+
+#chek {
+  display: none;
+}
+
+.rightSide2 {
+  display: none;
+}
+
+.sectionMain {
+  padding-top: 145px;
+  background-color: #ACD5DE;
+  display: flex;
+  height: 629px;
+  gap: 450px;
+}
+.sectionMain .sectionText {
+  display: flex;
+  flex-direction: column;
+  font-family: Montserrat;
+  color: #1A4E8D;
+  margin-left: 40px;
+  animation: fadeIn 1.5s linear 1;
+}
+.sectionMain .sectionText .sectionH1 {
+  font-size: 70px;
+}
+.sectionMain .sectionText .sectionP {
+  font-size: 22px;
+}
+.sectionMain .sectionImg {
+  margin-top: 70px;
+  animation: fadeIn 1.5s linear 1;
+  position: relative;
+}
+.sectionMain .sectionImg img {
+  position: absolute;
+}
+
+.main1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main1 .mainH1 {
+  display: flex;
+  justify-content: center;
+  font-family: Montserrat;
+  margin-top: 70px;
+  color: #1A4E8D;
+  animation: fadeIn 2s linear 1;
+}
+.main1 .mainH1 h1 {
+  font-size: 60px;
+}
+.main1 .mainSvgs {
+  display: flex;
+  justify-content: center;
+  display: flex;
+  gap: 30px;
+  margin-top: 35px;
+}
+.main1 .mainSvgs .firstSvg {
+  display: flex;
+}
+.main1 .mainSvgs .firstSvg p {
+  margin-top: 13px;
+  font-family: Montserrat;
+  color: #1A4E8D;
+}
+.main1 .mainSvgs .firstSvg p {
+  margin-left: 7px;
+}
+.main1 .mainSvgs .secondSvg {
+  display: flex;
+}
+.main1 .mainSvgs .secondSvg p {
+  margin-top: 13px;
+  font-family: Montserrat;
+  color: #1A4E8D;
+}
+.main1 .mainSvgs .thirdSvg {
+  display: flex;
+}
+.main1 .mainSvgs .thirdSvg p {
+  margin-top: 13px;
+  font-family: Montserrat;
+  color: #1A4E8D;
+}
+.main1 .mainButton {
+  display: flex;
+  justify-content: center;
+  padding: 13px 30px 13px 30px;
+  border-radius: 25px;
+  margin-top: 40px;
+  background-color: #1A4E8D;
+  transition: 0.5s;
+}
+.main1 .mainButton:hover {
+  background-color: #143a68;
+  transition: 0.5s;
+}
+.main1 .mainButton a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-weight: 500;
+}
+.main1 .slide {
+  display: none;
+}
+.main1 .imgDivs {
+  display: flex;
+  gap: 18px;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+.main1 .imgDivs .imgBox {
+  overflow: hidden;
+  border-radius: 12px;
+}
+.main1 .imgDivs img {
+  height: 239px;
+  width: 359px;
+  border-radius: 12px;
+  transition: 1s;
+}
+.main1 .imgDivs img:hover {
+  transform: scale(1.1);
+}
+
+.main2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ACD5DE;
+}
+.main2 .main2H1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Montserrat;
+  font-size: 35px;
+  color: #1A4E8D;
+  margin-bottom: 55px;
+  margin-top: 60px;
+  transition: 1s;
+}
+.main2 .testimonials {
+  display: flex;
+  justify-content: center;
+  gap: 145px;
+  margin-bottom: 150px;
+  flex-wrap: wrap;
+}
+.main2 .testimonials .testimonial {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  width: 322px;
+  height: 40vh;
+  border-radius: 12px;
+}
+.main2 .testimonials .testimonial .testimonialCont {
+  margin-left: 15px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.main2 .testimonials .testimonial .testimonialCont .photoBox {
+  margin-top: 25px;
+}
+.main2 .testimonials .testimonial .testimonialCont .photoBox img {
+  background-color: #D1F6FF;
+  border-radius: 50%;
+}
+.main2 .testimonials .testimonial .testimonialCont .testimonialText {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 300;
+  color: #1A4E8D;
+}
+.main2 .testimonials .testimonial .testimonialCont .testimonialPerson {
+  font-family: Montserrat;
+  color: #1A4E8D;
+  font-size: 20px;
+  font-weight: 600;
+}
+.main2 .testimonials .testimonial2 {
+  margin-top: 100px;
+}
+
+.main3 {
+  background-color: #1A4E8D;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main3 .main3H1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Montserrat;
+  color: white;
+  font-size: 30px;
+  margin-top: 140px;
+  margin-bottom: 40px;
+  transition: 1s;
+}
+.main3 .main3Btn {
+  padding: 13px 30px 13px 30px;
+  border-radius: 25px;
+  background-color: white;
+  margin-bottom: 80px;
+  transition: 0.5s;
+}
+.main3 .main3Btn:hover {
+  background-color: #ACD5DE;
+}
+.main3 .main3Btn a {
+  text-decoration: none;
+  color: #1A4E8D;
+  font-family: Montserrat;
+  font-weight: 400;
+  transition: 0.5s;
+}
+.main3 .main3Imgs {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+.main3 .main3Imgs .imgBox {
+  overflow: hidden;
+}
+.main3 .main3Imgs .imgBox img {
+  width: 350px;
+  height: 339px;
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 576px) {
+  .sectionMain {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    gap: 0;
+    position: relative;
+    z-index: -1;
+    height: 525px;
+  }
+  .sectionMain .sectionText {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 43px;
+  }
+  .sectionMain .sectionText .sectionH1 {
+    font-size: 65px;
+  }
+  .sectionMain .sectionImg {
+    margin-top: 0;
+    position: relative;
+    padding-bottom: 234px;
+  }
+  .sectionMain .sectionImg img {
+    width: 480px;
+    position: absolute;
+    top: -1px;
+    left: 6px;
+  }
+  .main1 .mainH1 h1 {
+    font-size: 48px;
+  }
+  .main1 .mainSvgs {
+    flex-direction: column;
+  }
+  .main1 .mainSvgs .svgs {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main1 .imgDivs {
+    display: none;
+  }
+  .main1 .slide {
+    display: block;
+    margin-top: 65px;
+    margin-bottom: 20px;
+  }
+  .main2 .main2H1 h1 {
+    font-size: 50px;
+    padding-bottom: 30px;
+  }
+  .main2 .testimonials {
+    flex-direction: column;
+    align-items: center;
+    height: 1337px;
+    flex-wrap: nowrap;
+  }
+  .main2 .testimonials .testimonial2 {
+    margin-top: 0;
+  }
+  .main2 .testimonials .testimonial {
+    height: 43vh;
+  }
+  .main2 .testimonials .testimonial .testimonialCont .testimonialPerson {
+    margin-top: 0;
+  }
+  .main3 .main3H1 {
+    margin-top: 60px;
+  }
+  .main3 .main3H1 h1 {
+    font-size: 40px;
+  }
+  .main3 .main3Imgs {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .main3 .main3Imgs .imgBox {
+    width: 450px;
+    animation: fadeIn 2s linear 1;
+  }
+  .main3 .main3Imgs .imgBox img {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 900px) {
+  nav {
+    background-color: transparent;
+  }
+  nav .rightSide {
+    visibility: hidden;
+  }
+  .labelchek {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    z-index: 600;
+    cursor: pointer;
+  }
+  .labelchek .burger {
+    width: 55px;
+    height: 50px;
+    margin-top: 70px;
+  }
+  .labelchek .burger .burgerLine {
+    width: 40px;
+    height: 3px;
+    margin-top: 9px;
+    border-radius: 8px;
+    background-color: black;
+  }
+  .labelchek .burger .l1 {
+    transition: 1s;
+  }
+  .labelchek .burger .l3 {
+    transition: 1s;
+  }
+  #chek:checked ~ .rightSide2 {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-color: #ACD5DE;
+    position: fixed;
+    z-index: 500;
+    animation: fadeIn 1s linear 1;
+  }
+  #chek:checked ~ .rightSide2 ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 185px;
+    padding-left: 0px !important;
+  }
+  #chek:checked ~ .rightSide2 ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat;
+    font-size: 20px;
+    width: 100%;
+    height: 70px;
+  }
+  #chek:checked ~ .rightSide2 ul .lis {
+    order: 5;
+  }
+  #chek:checked ~ .rightSide2 ul .activePage {
+    background-color: #0F2D52;
+  }
+  #chek:checked ~ .rightSide2 ul .activePage a {
+    color: white;
+  }
+  #chek:checked ~ .rightSide2 ul .diffLi {
+    color: #0F2D52;
+    gap: 5px;
+  }
+  #chek:checked ~ .rightSide2 ul .diffLi:hover a {
+    color: #0F2D52;
+  }
+  #chek:checked ~ .rightSide2 ul a {
+    text-decoration: none;
+    color: #1A4E8D;
+    font-family: Montserrat;
+  }
+  #chek:checked + label .burger .l1 {
+    transform: rotate(43deg) translate(7px);
+    transition: 1s;
+    position: fixed;
+  }
+  #chek:checked + label .burger .l2 {
+    visibility: hidden;
+  }
+  #chek:checked + label .burger .l3 {
+    transform: rotate(-51deg) translate(9px);
+    transition: 1s;
+    position: fixed;
+  }
+}/*# sourceMappingURL=myStyle.css.map */

@@ -1,0 +1,408 @@
+
+html {
+    scroll-behavior: smooth;
+  }
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+@mixin bookingStyles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    .pTags {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 7px;
+        font-family: Montserrat;
+        color: #1A4E8D;
+        width: 7%;
+        
+    }
+
+    .firstAdiv {
+        display: flex;
+        justify-content: start;
+        margin-left: 30px;
+        width: 25%;
+        .firstA {
+            color: #1A4E8D;
+            font-family: Montserrat;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 25px;
+
+                &:hover {
+                    color:  #1a4e8d8f;
+                    transition: 0.5s;
+            }
+        }
+    }
+    
+        .secondA {
+                text-decoration: none;
+                font-family: Montserrat;
+                color: #FFFFFF;
+                font-weight: 500;
+                font-size: 17px;
+                padding: 10px 26px 10px 26px;
+                border-radius: 25px;
+                margin-right: 47px;
+                background-color: #1A4E8D;
+                cursor: pointer;
+                
+
+            &:hover {
+                color:  #ffffffb7;
+                background-color: #1a4e8db9;
+                transition: 0.5s;
+            }
+        }
+    
+
+
+}
+
+
+
+section {
+    background-color: #ACD5DE;
+    
+
+.serviceText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    animation: fadeIn 1s linear  1;
+    padding-top: 165px;
+    .servicesP{
+        color: #1A4E8D;
+        font-size: 20px;
+        font-family: Montserrat;
+        font-weight: 600;
+    }
+    .serviceH1 {
+        color: #1A4E8D;
+        font-size: 60px;
+        font-family: Montserrat;
+    }
+}
+    .bookingClass{
+        width: 100%;
+        height: 140vh;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        margin-top: 70px;
+        animation: fadeIn 2s linear  1;
+    .bookings {
+        @include bookingStyles();
+        width: 50%;
+        height: 140px;
+        background-color: #FFFFFF;
+        .testDiv {
+            display: flex;
+        }
+        
+        
+    }
+}
+}
+
+
+
+
+.sectionService {
+    
+    #chekk {
+        display: none;
+    }
+    
+
+    #chekk:checked ~ .calendarss {
+        display: block;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 150px;
+        background-color: white;
+
+        
+        
+    }
+     #chekk:checked ~ .bookingClass  {
+        display: none;
+        
+     }
+
+    
+
+     #chekk:checked ~ .serviceText {
+        display: none !important;
+     }
+
+     #checkedd:checked ~ .calendarss {
+        display: none;
+     }
+
+     #checkedd:checked ~ .bookingClass {
+        display: flex;
+     }
+
+     #checkedd:checked ~ .serviceText {
+        display: flex;
+     }
+    .calendarss {
+        display: none;
+
+        .calendarBox {
+            height: 656px;
+            width: 50%;
+            outline: 1px solid #1A4E8D;
+            padding-left: 30px;
+            padding-top: 30px;
+
+            
+            .backButton {
+                font-family: Montserrat; 
+                font-size: 15px;
+                color: #1A4E8D;
+                font-weight: 500;
+                transition: 1s;
+                &:hover {
+                    color: #1a4e8da9;
+                    cursor: pointer;
+                    transition: 1s;
+                }
+            }
+
+            .calendarPs {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                padding-top: 20px;
+                .calendarFirstP {
+                    p {
+                        font-size: 38px;
+                        font-weight: 600;
+                    }
+                }
+                p {
+                    font-family: Montserrat;
+                    color: #1A4E8D;
+                }
+            }
+
+            .dateNtimeZone {
+                display: flex;
+                gap: 100px;
+                padding-top: 70px;
+                p {
+                    font-family: Montserrat;
+                    color: #1A4E8D;
+                }
+                label {
+                    font-family: Montserrat;
+                    color: #1A4E8D;
+                }
+                select{
+                    font-family: Montserrat;
+                    font-size: 15px;
+                    color: #1A4E8D;
+                }
+                
+                .serviceDetails {
+                    border-bottom: 1px solid #1A4E8D;
+                    width: 22%;
+                }
+
+                .forBorder {
+                    display: flex;
+                    gap: 76px;
+                    border-bottom: 1px solid #1A4E8D;
+                }
+
+                #zone {
+                    border: none;
+                    
+                    &:focus {
+                        
+                        outline: none;
+                    }
+                    
+                }
+            }
+
+            .calendarBooking {
+                display: flex;
+                gap: 139px;
+                padding-top: 20px;
+
+                .actualCalendar {
+                    input {
+                        font-family: Montserrat;
+                        padding: 5px 33px 8px 6px;
+                        padding-left: 30px;
+                        color: #1A4E8D;
+                        
+                    }
+                }
+                .bookingDay {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 50px;
+                    p {
+                        font-family: Montserrat;
+                        color: #1A4E8D;
+                    }
+                    button {
+                        font-family: Montserrat;
+                        padding: 10px 30px 10px 30px;
+                        border-radius: 25px;
+                        border: none;
+                        background-color: #1A4E8D;
+                        color: white;
+                        font-size: 15px;
+                        font-weight: 500;
+                        transition: 1s;
+                        &:hover {
+                            background-color: white;
+                            padding: 9px 29px 9px 29px;
+                            border: 1px solid #1A4E8D;
+                            color: #1A4E8D;
+                            transition: 1s;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .btnCalendar {
+                    font-family: Montserrat;
+                    font-weight: 500;
+                    height: 35px;
+                    padding: 10px 30px 10px 30px;
+                    border-radius: 25px;
+                    border: none;
+                    background-color: #ABA5A4;
+                    color: white;
+                    width: 22%;
+                    
+                }
+            }
+        }
+
+    }
+
+            
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 576px) {
+    
+    nav {
+        background-color: #ACD5DE !important;
+    }
+    .serviceText {
+        display: flex !important;
+        align-items: start !important;
+        margin-left: 50px !important;
+        padding-top: 0 !important;
+        .servicesP {
+            font-weight: 500 !important;
+            padding-top: 20px !important;
+        }
+        .serviceH1 {
+            font-size: 50px !important;
+        }
+        
+    }
+    
+    .bookingClass {
+        height: 250vh !important;
+        .bookings {
+            height: 280px !important;
+            width: 80% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 50px !important;
+            
+            .pTags {
+                align-items: center !important;
+                width: auto !important;
+            }
+            .firstAdiv {
+                margin-left: 0 !important;
+                width: auto !important;
+                .firstA {
+                margin-left: 0 !important;
+                margin-bottom: 0 !important;
+                 }   
+            }
+            .secondA {
+                margin-right: 0 !important;
+            }
+            
+        }
+    }
+
+    .sectionService {
+        .calendarss {
+            margin-top: 0px !important;
+            .calendarBox {
+                width: 95%;
+
+                .dateNtimeZone {
+                    flex-direction: column;
+                    .forBorder {
+                        flex-direction: column;
+                        gap: 10px;
+                    }
+                    .serviceDetails {
+                        width: 86%;
+                        position: absolute;
+                        top: 846px;
+                        
+                    }
+                }
+                .calendarBooking {
+                    flex-direction: column;
+                    gap: 36px;
+                    .btnCalendar {
+                        margin-top: 48px;
+                        width: 97%;
+                    }
+                    .bookingDay {
+                        button {
+                            width: 97%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+
+
+

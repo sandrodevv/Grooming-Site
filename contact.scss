@@ -1,0 +1,240 @@
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+@mixin startingPoints {
+    label {
+        justify-content: start;
+    }
+}
+
+@mixin flexStyleMain {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 74px;
+}
+
+@mixin flexStyle {
+    display: flex;
+    flex-direction: column; 
+    gap: 30px;
+    
+    label {
+        color: #1A4E8D;
+        font-family: Montserrat;
+        font-size: 17px;
+        z-index: 1 !important;
+    }
+
+    input {
+        border: none;
+        border-bottom: solid 1px #1A4E8D;
+        background-color: transparent;
+        outline: none;
+        width: 400px;
+
+        &:hover {
+            border-bottom: solid 2px #1A4E8D;
+        }
+    }
+}
+
+.contactS1 {
+    height: auto;
+    padding-top: 142px;
+    background-color: #ACD5DE;
+    .p1h1 {
+        margin-left: 40px;
+    }
+    .contactP1 {
+        font-family: Montserrat;
+        color: #1A4E8D;
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    .contactH1 {
+        font-family: Montserrat;
+        color: #1A4E8D;
+        font-size: 40px;
+        .mobileH1 {
+            display: none;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        margin-left: 50px;
+        margin-top: 100px;
+        
+        .flNames {
+            @include flexStyleMain();
+            .fName {
+                @include flexStyle()
+            }
+
+            .lName {
+                @include flexStyle()
+            }
+
+        }
+            
+           .mailNaddress {
+            @include flexStyleMain();
+
+                .email {
+                    @include flexStyle();
+                }
+                .address {
+                    @include flexStyle();
+                }
+           }
+
+           .messageSection {
+            display: flex;
+            margin-bottom: 110px;
+            z-index: 1 !important;
+                .messages {
+                    display: flex;
+                    flex-direction: column; 
+                    gap: 60px;
+                    
+                    label {
+                        color: #1A4E8D;
+                        font-family: Montserrat;
+                        font-size: 17px;
+                    }
+
+                    input {
+                        border: none;
+                        border-bottom: solid 1px #1A4E8D;
+                        background-color: transparent;
+                        outline: none;
+                        width: 900px;
+                
+                        &:hover {
+                            border-bottom: solid 2px #1A4E8D;
+                        }
+                    }
+                }
+           }
+    }
+
+    .contactButton {
+        .submitBtn {
+        text-decoration: none;
+        font-family: Montserrat;
+        color: #FFFFFF;
+        font-weight: 500;
+        font-size: 17px;
+        padding: 10px 32px 10px 32px;
+        border-radius: 25px;
+        background-color: #1A4E8D;
+        transition: 1s;
+        border: none;
+        cursor: pointer;
+            &:hover {
+                background-color: #0f2c50;
+                transition: 1s;
+            }
+
+        }
+        
+    }
+
+    .contactPtags {
+        margin-top: 110px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        p {
+            margin-left: 40px;
+            color: #1A4E8D;
+            font-family: Montserrat;
+            font-weight: 400;
+        }
+
+    }
+
+    .contactIcons {
+        display: flex;
+        gap: 10px;
+        font-size: 24px;
+        margin-left: 40px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+         
+        a {
+            color: black;
+        }
+    }
+
+    .contactMap {
+        iframe {
+            height: 600px;
+            width: 100%;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 576px) {
+
+    nav {
+        background-color: #ACD5DE !important;
+    }
+
+    .contactS1 {
+        padding-top: 17px;
+        height: 2237px;
+        .contactP1 {
+            p {
+                font-size: 28px;
+            }
+        }
+        .contactH1 {
+            margin-top: 30px;
+            h1 {
+                display: none;
+            }
+            .mobileH1 {
+                display: block;
+                font-size: 41px;
+            }
+        }
+
+        form {
+            .flNames {
+                flex-direction: column;
+                .fName {
+                    @include startingPoints()
+                    
+                }
+                .lName {
+                    @include startingPoints()
+                }
+            }
+            .mailNaddress {
+                flex-direction: column;
+                .email {
+                    @include startingPoints();
+                }
+                .address {
+                    @include startingPoints();
+                }
+            }
+            .messageSection {
+                .messages {
+                    @include startingPoints();
+                    input {
+                        width: 400px;
+                    }
+                }
+            }
+        }
+    }
+}
